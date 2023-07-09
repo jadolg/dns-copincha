@@ -17,3 +17,6 @@ jobs:
         env:
           TF_VAR_porkbun_api_key: ${{ secrets.TF_VAR_PORKBUN_API_KEY }}
           TF_VAR_porkbun_secret_key: ${{ secrets.TF_VAR_PORKBUN_SECRET_KEY }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update state
