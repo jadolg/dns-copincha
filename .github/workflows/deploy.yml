@@ -14,3 +14,6 @@ jobs:
         run: terraform init
       - name: Deploy changes
         run: terraform apply -auto-approve
+        env:
+          TF_VAR_porkbun_api_key: ${{ secrets.TF_VAR_PORKBUN_API_KEY }}
+          TF_VAR_porkbun_secret_key: ${{ secrets.TF_VAR_PORKBUN_SECRET_KEY }}
