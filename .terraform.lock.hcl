@@ -1,0 +1,24 @@
+# This file is maintained automatically by "terraform init".
+# Manual edits may be lost in future updates.
+
+provider "registry.terraform.io/cullenmcdermott/porkbun" {
+  version = "0.2.1"
+  hashes = [
+    "h1:oYD6/EuwHORmxu+oQSppi1W49DfXjLaoKT9EqhllypY=",
+    "zh:06032061fa6c71197c9c841bd4fcc8b7dbd6eac64b26fe995a958964e582cee2",
+    "zh:47f610c09155f48ecb1589560e9a6a024fd9110d37c5d228b0c8a75d05d361dc",
+    "zh:4e649ac43a251f37c1d2457d62aa94f0d705386e362b3d862fa822a10974d9b0",
+    "zh:622dda2d2e84d1a2e8421261b4706b1604235d3cba46b8e16f563d69e1145565",
+    "zh:6287f39c7c532a3b6d698a5297def79464a97f0389ab1e354d1cb601407f5fb0",
+    "zh:693c33caaa71f4eaa87380dfb58300d1e306495feaf585f65694f882ab4188be",
+    "zh:7aa69cf07f88e302d4e1f7937452b55a93b679498ef79334bbd375c7f50f2a54",
+    "zh:7eb0c8163f92abbcdcab59f55b3dede6b59beca35a9a4e048537a7572011cf17",
+    "zh:a92d581b08dc98baf9321c89c291e8cd9149e36c8a5440c064463f33c4fa4259",
+    "zh:b8529634ca7afb49ebc91c64e93888044a91bc72a87ce93c093eebea9d099671",
+    "zh:e2ddc290b007cd90a7637502150028d795b3f1df23d8cf39bb67336f0020bf18",
+    "zh:e33e41c63e0916730b655997bb89756ecf9502afd2f156595d6aabf282c5d9c0",
+    "zh:f0199f668263900df3a8c56c33598d7b41255be9441dc1af81beafa25294128c",
+    "zh:f809ab383cca0a5f83072981c64208cbd7fa67e986a86ee02dd2c82333221e32",
+    "zh:f899e2802bfb5f97f5bf6efb9fec1f7095d6283a75145b388e64f3b1176289a0",
+  ]
+}
