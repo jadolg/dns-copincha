@@ -29,24 +29,24 @@ resource "porkbun_dns_record" "main_record" {
 }
 
 variable "names" {
-  type = list(string)
-  default = [
-    "arts",
-    "blog",
-    "copinchapedia",
-    "docs",
-    "fossil",
-    "git",
-    "m00",
-    "pph",
-    "repos",
-    "wiki"
-  ]
+  type = map(string)
+  default = {
+    "arts"="arts",
+    "blog"="blog",
+    "copinchapedia"="copinchapedia",
+    "docs"="docs",
+    "fossil"="fossil",
+    "git"="git",
+    "m00"="m00",
+    "pph"="pph",
+    "repos"="repos",
+    "wiki"="wiki"
+  }
 }
 
 resource "porkbun_dns_record" "cnames" {
-  count = length(var.names)
-  name    = var.names[count.index]
+  for_each = var.names
+  name    = each.value
   domain  = "copincha.org"
   content = "copincha.org."
   type    = "CNAME"
