@@ -40,8 +40,7 @@ variable "names" {
     "m00",
     "pph",
     "repos",
-    "wiki",
-    "test"
+    "wiki"
   ]
 }
 
