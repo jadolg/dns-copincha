@@ -39,7 +39,6 @@ variable "names" {
     "git",
     "m00",
     "pph",
-    "test",
     "repos",
     "wiki"
   ]
