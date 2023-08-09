@@ -40,7 +40,8 @@ variable "names" {
     "m00"="m00",
     "pph"="pph",
     "repos"="repos",
-    "wiki"="wiki"
+    "wiki"="wiki",
+    "3d-a-lo-cubano"="3d-a-lo-cubano"
   }
 }
 
