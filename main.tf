@@ -24,7 +24,7 @@ provider "porkbun" {
 
 resource "porkbun_dns_record" "main_record" {
   name    = ""
-  domain  = "copincha.org"
+  domain  = "old.copincha.org"
   content = "37.218.242.73"
   type    = "A"
 }
@@ -32,16 +32,8 @@ resource "porkbun_dns_record" "main_record" {
 variable "names" {
   type = map(string)
   default = {
-    "arts"="arts",
-    "blog"="blog",
-    "copinchapedia"="copinchapedia",
-    "docs"="docs",
     "fossil"="fossil",
-    "m00"="m00",
-    "pph"="pph",
     "repos"="repos",
-    "wiki"="wiki",
-    "3d-a-lo-cubano"="3d-a-lo-cubano"
   }
 }
 
@@ -49,6 +41,12 @@ variable "names_hh" {
   type = map(string)
   default = {
     "git"="git",
+    "arts"="arts",
+    "docs"="docs",
+    "m00"="m00",
+    "pph"="pph",
+    "wiki"="wiki",
+    "3d-a-lo-cubano"="3d-a-lo-cubano"
   }
 }
 
@@ -56,7 +54,7 @@ resource "porkbun_dns_record" "cnames" {
   for_each = var.names
   name    = each.value
   domain  = "copincha.org"
-  content = "copincha.org."
+  content = "old.copincha.org."
   type    = "CNAME"
 }
 
@@ -66,4 +64,11 @@ resource "porkbun_dns_record" "cnames_hh" {
   domain  = "copincha.org"
   content = "hh.akiel.dev."
   type    = "CNAME"
+}
+
+resource "porkbun_dns_record" "base_record" {
+  domain = "copincha.org"
+  type   = "ALIAS"
+  content = "hh.akiel.dev"
+  name = ""
 }
