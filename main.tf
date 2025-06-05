@@ -2,6 +2,7 @@ terraform {
   required_providers {
     porkbun = {
       source = "cullenmcdermott/porkbun"
+      version = "0.3.0"
     }
   }
 }
@@ -36,7 +37,6 @@ variable "names" {
     "copinchapedia"="copinchapedia",
     "docs"="docs",
     "fossil"="fossil",
-    "git"="git",
     "m00"="m00",
     "pph"="pph",
     "repos"="repos",
@@ -45,10 +45,25 @@ variable "names" {
   }
 }
 
+variable "names_hh" {
+  type = map(string)
+  default = {
+    "git"="git",
+  }
+}
+
 resource "porkbun_dns_record" "cnames" {
   for_each = var.names
   name    = each.value
   domain  = "copincha.org"
   content = "copincha.org."
+  type    = "CNAME"
+}
+
+resource "porkbun_dns_record" "cnames_hh" {
+  for_each = var.names_hh
+  name    = each.value
+  domain  = "copincha.org"
+  content = "hh.akiel.dev."
   type    = "CNAME"
 }
